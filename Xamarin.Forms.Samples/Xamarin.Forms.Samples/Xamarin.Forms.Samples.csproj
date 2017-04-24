@@ -30,6 +30,12 @@
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="Xamarin.Forms.SamplesPage.xaml" />
+    <EmbeddedResource Include="Views\LetterSpacingView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -45,6 +51,18 @@
     <Compile Include="Views\BaseContentPage.cs" />
     <Compile Include="Views\IViewActionsHandler.cs" />
     <Compile Include="Helpers\SingleExecutionCommand.cs" />
+    <Compile Include="Helpers\StyleManager.cs" />
+    <Compile Include="Controls\ClickableContentView.cs" />
+    <Compile Include="Controls\LetterSpacingLabel.cs" />
+    <Compile Include="Controls\NavigationTopBar.cs" />
+    <Compile Include="ViewModels\LetterSpacingViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\LetterSpacingView.xaml.cs">
+      <DependentUpon>LetterSpacingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -89,6 +107,7 @@
     <Folder Include="Views\" />
     <Folder Include="Models\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

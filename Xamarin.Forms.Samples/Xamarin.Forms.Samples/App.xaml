@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<unity:PrismApplicatio xmlns="http://xamarin.com/schemas/2014/forms" 
+<unity:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="Xamarin.Forms.Samples.App"
     xmlns:unity="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms">
     <Application.Resources>
         <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <!-- Colors -->
+      <Color x:Key="PrimaryDarkColor">#2A363B</Color>
+            <Color x:Key="AccentColor">#E84A5F</Color>
+            <Color x:Key="PrimaryColor">#FF847C</Color>
+            <Color x:Key="PrimaryLightColor">#FECEAB</Color>
+            <Color x:Key="SecondaryLightColor">#99B898</Color>
+            <Color x:Key="PrimaryTextColor">White</Color>
+    <Color x:Key="NavigationBarTitleColor">White</Color>
+        </ResourceDictionary>
     </Application.Resources>
-</unity:PrismApplicatio>
+</unity:PrismApplication>

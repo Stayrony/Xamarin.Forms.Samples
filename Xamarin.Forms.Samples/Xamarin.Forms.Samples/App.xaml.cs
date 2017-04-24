@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using Prism.Unity;
 using Prism.Navigation;
-using Prism.Unity;
 using Xamarin.Forms.Xaml;
 using Microsoft.Practices.Unity;
 using Xamarin.Forms;
+using Xamarin.Forms.Samples.Views;
 
 namespace Xamarin.Forms.Samples
 {
@@ -21,8 +21,7 @@ namespace Xamarin.Forms.Samples
         public App()
         {
             InitializeComponent();
-
-            MainPage = new Xamarin_Forms_SamplesPage();
+            MainPage = new Xamarin.Forms.Samples.Views.MainView();
         }
 
         #region -- Overrides --
@@ -37,6 +36,9 @@ namespace Xamarin.Forms.Samples
             //Services
 
             //Managers
+
+            //Navigation
+            Container.RegisterTypeForNavigation<LetterSpacingView>("LetterSpacing");
         }
 
         protected override void OnStart()
