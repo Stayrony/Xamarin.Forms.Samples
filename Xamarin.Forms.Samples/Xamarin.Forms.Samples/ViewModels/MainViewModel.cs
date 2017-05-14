@@ -18,6 +18,7 @@ namespace Xamarin.Forms.Samples.ViewModels
         #region -- Public properties --
 
         public ICommand LetterSpacingCommand => SingleExecutionCommand.FromFunc(OnLetterSpacingCommandAsync);
+		public ICommand MultiLineBreakLabelCommand => SingleExecutionCommand.FromFunc(OnMultiLineBreakLabelCommandAsync);
 
         #endregion
 
@@ -27,6 +28,11 @@ namespace Xamarin.Forms.Samples.ViewModels
         {
             await _navigationService.NavigateAsync("LetterSpacing");
         }
+
+		private async Task OnMultiLineBreakLabelCommandAsync()
+		{
+			await _navigationService.NavigateAsync("MultiLineBreakLabel");
+		}
 
         #endregion
 

@@ -39,6 +39,7 @@ namespace Xamarin.Forms.Samples
 
             //Navigation
             Container.RegisterTypeForNavigation<LetterSpacingView>("LetterSpacing");
+			Container.RegisterTypeForNavigation<MultiLineBreakLabelView>("MultiLineBreakLabel");
         }
 
         protected override void OnStart()
