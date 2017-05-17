@@ -18,15 +18,8 @@ namespace Xamarin.Forms.Samples.Droid.Renderers
 			if (Control != null)
 			{
 				var label = (MultiLineBreakLabel)this.Element;
-
-				Control.LayoutChange += (s, args) =>
-				{
-					Control.Ellipsize = TextUtils.TruncateAt.End;
-					Control.SetMaxLines(label.MaxLines);
-				};
+				Control.SetMaxLines(label.MaxLines);
 			}
-
-			this.UpdateLayout();
 		}
 
 		#endregion

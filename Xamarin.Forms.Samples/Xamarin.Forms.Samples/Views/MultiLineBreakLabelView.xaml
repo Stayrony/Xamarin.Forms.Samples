@@ -28,7 +28,7 @@
 			LineBreakMode="TailTruncation" 
 			Grid.Row="1" 
 			Margin="20" 
-			Text="Max Lines = 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at vehicula mauris, et accumsan urna. Ut sagittis laoreet enim, suscipit tristique urna rhoncus non." 
+			Text="Max Lines = 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at vehicula mauris, et accumsan urna. Ut sagittis laoreet enim, suscipit tristique urna rhoncus non. Maecenas at vehicula mauris, et accumsan urna. Ut sagittis laoreet enim, suscipit tristique urna rhoncus non." 
 			MaxLines="4" />
 		<controls:MultiLineBreakLabel 
 			Grid.Row="2" 
