@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Xamarin.Forms.Samples.Views.MultiLineBreakLabelView" 
+	xmlns:views="clr-namespace:Xamarin.Forms.Samples.Views;assembly=Xamarin.Forms.Samples" 
+	xmlns:controls="clr-namespace:Xamarin.Forms.Samples.Controls;assembly=Xamarin.Forms.Samples">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<controls:NavigationTopBar 
+			Grid.Row="0" 
+			LeftCommand="{Binding BackCommand}" 
+			TitleLabel="Multi LineBreak Label"
+			LeftImage="back" 
+			BackgroundColor="{StaticResource PrimaryColor}">
+			<controls:NavigationTopBar.Padding>
+				<OnPlatform x:TypeArguments="Thickness">
+					<OnPlatform.iOS>10,20,10,0</OnPlatform.iOS>
+					<OnPlatform.Android>10,0,10,0</OnPlatform.Android>
+				</OnPlatform>
+			</controls:NavigationTopBar.Padding>
+		</controls:NavigationTopBar>
+		<controls:MultiLineBreakLabel
+			LineBreakMode="TailTruncation" 
+			Grid.Row="1" 
+			Margin="20" 
+			Text="Max Lines = 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at vehicula mauris, et accumsan urna. Ut sagittis laoreet enim, suscipit tristique urna rhoncus non. Maecenas at vehicula mauris, et accumsan urna. Ut sagittis laoreet enim, suscipit tristique urna rhoncus non." 
+			MaxLines="4" />
+		<controls:MultiLineBreakLabel 
+			Grid.Row="2" 
+			Margin="20" 
+			LineBreakMode="TailTruncation" 
+			Text="Max Lines = 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at vehicula mauris, et accumsan urna. Ut sagittis laoreet enim, suscipit tristique urna rhoncus non." 
+			MaxLines="3" />
+		<controls:MultiLineBreakLabel 
+			Grid.Row="3" 
+			Margin="20" 
+			LineBreakMode="TailTruncation" 
+			Text="Max Lines = 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at vehicula mauris, et accumsan urna. Ut sagittis laoreet enim, suscipit tristique urna rhoncus non." 
+			MaxLines="2" />
+
+	</Grid>
+</views:BaseContentPage>

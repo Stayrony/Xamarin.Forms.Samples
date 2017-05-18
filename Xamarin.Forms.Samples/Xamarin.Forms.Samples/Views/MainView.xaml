@@ -4,17 +4,22 @@
     x:Class="Xamarin.Forms.Samples.Views.MainView" 
     xmlns:views="clr-namespace:Xamarin.Forms.Samples.Views;assembly=Xamarin.Forms.Samples" 
     BackgroundColor="{StaticResource PrimaryDarkColor}">
-    <Grid Margin="20">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Label Text="Click on the button to see how it works" 
-            HorizontalOptions="Center" 
-        TextColor="{StaticResource PrimaryTextColor}" Grid.Row="0" />
-        <Button Grid.Row="1" Command="{Binding LetterSpacingCommand}" 
-            Text="Letter Spacing Label" 
-            BackgroundColor="{StaticResource AccentColor}" 
-            TextColor="{StaticResource PrimaryTextColor}" />
-    </Grid>
+	<Grid Margin="20">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<Label Text="Click on the button to see how it works" HorizontalOptions="Center" TextColor="{StaticResource PrimaryTextColor}" Grid.Row="0" />
+		<StackLayout Spacing="20" Grid.Row="1">
+			<Button Command="{Binding LetterSpacingCommand}" 
+				Text="Letter Spacing Label"
+				BackgroundColor="{StaticResource AccentColor}" 
+				TextColor="{StaticResource PrimaryTextColor}" />
+			<Button
+				Command="{Binding MultiLineBreakLabelCommand}" 
+				Text="Multi LineBreak Label" 
+				BackgroundColor="{StaticResource AccentColor}" 
+				TextColor="{StaticResource PrimaryTextColor}" />
+		</StackLayout>
+	</Grid>
 </views:BaseContentPage>
