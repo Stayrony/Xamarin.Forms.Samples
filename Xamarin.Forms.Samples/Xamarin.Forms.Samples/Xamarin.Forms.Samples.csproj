@@ -39,6 +39,9 @@
     <EmbeddedResource Include="Views\MultiLineBreakLabelView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ShadowCardView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -71,6 +74,11 @@
     <Compile Include="Views\MultiLineBreakLabelView.xaml.cs">
       <DependentUpon>MultiLineBreakLabelView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ShadowFrame.cs" />
+    <Compile Include="Views\ShadowCardView.xaml.cs">
+      <DependentUpon>ShadowCardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ShadowCardViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.ServiceLocation">

@@ -19,6 +19,7 @@ namespace Xamarin.Forms.Samples.ViewModels
 
         public ICommand LetterSpacingCommand => SingleExecutionCommand.FromFunc(OnLetterSpacingCommandAsync);
 		public ICommand MultiLineBreakLabelCommand => SingleExecutionCommand.FromFunc(OnMultiLineBreakLabelCommandAsync);
+		public ICommand ShadowCardCommand => SingleExecutionCommand.FromFunc(OnShadowCardCommandAsync);
 
         #endregion
 
@@ -32,6 +33,11 @@ namespace Xamarin.Forms.Samples.ViewModels
 		private async Task OnMultiLineBreakLabelCommandAsync()
 		{
 			await _navigationService.NavigateAsync("MultiLineBreakLabel");
+		}
+
+		private async Task OnShadowCardCommandAsync()
+		{
+			await _navigationService.NavigateAsync("ShadowCard");
 		}
 
         #endregion
