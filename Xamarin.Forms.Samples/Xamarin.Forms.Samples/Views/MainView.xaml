@@ -20,6 +20,11 @@
 				Text="Multi LineBreak Label" 
 				BackgroundColor="{StaticResource AccentColor}" 
 				TextColor="{StaticResource PrimaryTextColor}" />
+			<Button
+				Command="{Binding ShadowCardCommand}" 
+				Text="Shadow Card" 
+				BackgroundColor="{StaticResource AccentColor}" 
+				TextColor="{StaticResource PrimaryTextColor}" />
 		</StackLayout>
 	</Grid>
 </views:BaseContentPage>

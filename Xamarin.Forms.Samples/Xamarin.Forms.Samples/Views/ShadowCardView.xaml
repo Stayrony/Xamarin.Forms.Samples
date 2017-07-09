@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Xamarin.Forms.Samples.Views.ShadowCardView" 
+	xmlns:views="clr-namespace:Xamarin.Forms.Samples.Views;assembly=Xamarin.Forms.Samples" 
+	xmlns:controls="clr-namespace:Xamarin.Forms.Samples.Controls;assembly=Xamarin.Forms.Samples">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<controls:NavigationTopBar 
+			Grid.Row="0" 
+			LeftCommand="{Binding BackCommand}" 
+			TitleLabel="Shadow Card" 
+			LeftImage="back" 
+			BackgroundColor="{StaticResource PrimaryColor}">
+			<controls:NavigationTopBar.Padding>
+				<OnPlatform x:TypeArguments="Thickness">
+					<OnPlatform.iOS>10,20,10,0</OnPlatform.iOS>
+					<OnPlatform.Android>10,0,10,0</OnPlatform.Android>
+				</OnPlatform>
+			</controls:NavigationTopBar.Padding>
+		</controls:NavigationTopBar>
+		<controls:ShadowFrame Grid.Row="1" Padding="0" VerticalOptions="Center">
+			<controls:ShadowFrame.Content>
+				<StackLayout Spacing="10" VerticalOptions="FillAndExpand">
+					<Image Source="https://i.ytimg.com/vi/61aM0DXpKkc/maxresdefault.jpg" Aspect="AspectFill" />
+					<Label Text="EXTREME DOWNHILL" Margin="20, 0" />
+					<Label Margin="20, 10, 20, 40" Text="Downhill mountain biking (DH) is a genre of mountain biking practiced on steep, rough terrain that often features jumps, drops, rock gardens and other obstacles ..." />
+				</StackLayout>
+			</controls:ShadowFrame.Content>
+		</controls:ShadowFrame>
+	</Grid>
+</views:BaseContentPage>

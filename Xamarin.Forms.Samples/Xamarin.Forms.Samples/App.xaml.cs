@@ -40,6 +40,7 @@ namespace Xamarin.Forms.Samples
             //Navigation
             Container.RegisterTypeForNavigation<LetterSpacingView>("LetterSpacing");
 			Container.RegisterTypeForNavigation<MultiLineBreakLabelView>("MultiLineBreakLabel");
+			Container.RegisterTypeForNavigation<ShadowCardView>("ShadowCard");
         }
 
         protected override void OnStart()
